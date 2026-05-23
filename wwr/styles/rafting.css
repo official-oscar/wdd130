@@ -2,7 +2,7 @@
     --primary-color: #1e293b;
     --secondary-color: #f1f5f9;
     --accent1-color: #3B82F6;
-    --accent2-color: #f59e0b;
+    --accent2-color: black;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, san-serif;
 }
@@ -109,7 +109,7 @@ article {
 section p {
     margin: 16px;
     padding: 18px;
-    color: var(--primary-color);
+    color: var(--accent2-color);
     font-family: var(--body-font);
 }
 
