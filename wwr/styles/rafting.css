@@ -76,13 +76,6 @@ nav li {
     border-right: 1px solid #333;
 }
 
-footer {
-    width: 840px;
-    margin: 0 auto;
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-}
-
 main {
     width: 840px;
     margin: 0 auto;
@@ -228,6 +221,10 @@ footer {
     grid-template-columns: 1fr auto;
     align-items: center;
     padding: 1rem;
+    width: 840px;
+    margin: 0 auto;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
 }
 
 .socialmedia a {
