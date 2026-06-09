@@ -99,6 +99,7 @@ main {
     font-style: normal;
     line-height: 1.5;
     font-size: 0.95rem;
+    color: var(--primary-color);
 }
 
 .access .location-grid {
