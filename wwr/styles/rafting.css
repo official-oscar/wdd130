@@ -3,11 +3,161 @@
     --secondary-color: #f1f5f9;
     --accent1-color: #1d4ed8;
     --accent2-color: #111827;
+    --accent3-color: #ddd;
+    --accent4-color: #e2e8f0;
+    --accent5-color: #4a5568;
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, san-serif;
 }
 
 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 70vh;
+    align-items: center;
+    background-color: var(--accent2-color);
+}
+
+.hero-text {
+    grid-column: 2/7;
+    padding: 2rem 0;
+    color: var(--secondary-color);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    grid-column: 7/13;
+    height: 100%;
+    background-color: var(--accent3-color);
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newsletter {
+    max-width: 600px;
+    margin: 6rem auto;
+    padding: 3rem 2rem;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.newsletter p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid var(--primary-color);
+    font-size: 1rem;
+}
+
+.trips-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.trips-container h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.trip-card {
+    border: 1px solid var(--accent4-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.trip-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.trip-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.trip-content p {
+    margin-bottom: 1.5rem;
+    color: var(--accent5-color);
+}
+
+.trip-meta {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+*/ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -378,4 +528,19 @@ main a {
 
 main a:hover {
     color: #1e40af;
+}
+
+@media (max-width:768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        grid-column: 1/-1;
+        height: 300px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
 }
